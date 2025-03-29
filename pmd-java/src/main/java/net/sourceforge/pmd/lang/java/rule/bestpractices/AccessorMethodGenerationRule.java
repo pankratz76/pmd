@@ -21,6 +21,7 @@ import net.sourceforge.pmd.lang.java.symbols.JConstructorSymbol;
 import net.sourceforge.pmd.lang.java.symbols.JFieldSymbol;
 import net.sourceforge.pmd.lang.java.symbols.JVariableSymbol;
 import net.sourceforge.pmd.reporting.RuleContext;
+import org.checkerframework.checker.nullness.qual.NonNull;
 
 public class AccessorMethodGenerationRule extends AbstractJavaRulechainRule {
 
@@ -90,14 +91,14 @@ public class AccessorMethodGenerationRule extends AbstractJavaRulechainRule {
      * Eg for a canonical name {@code com.github.Outer.Inner}, returns {@code Outer.Inner}.
      */
     static String canonicalNameWithoutPackage(JClassSymbol symbol) {
-        return canonicalNameWithoutPackage(symbol, symbol.getCanonicalName());
+        return canonicalNameWithoutPackage(symbol.getCanonicalName(), symbol.getPackageName(), symbol.getSimpleName());
     }
 
-    static String canonicalNameWithoutPackage(JClassSymbol symbol, String canoName) {
+    static String canonicalNameWithoutPackage(String canoName, String packageName, String simpleName) {
         return canoName == null
-                ? symbol.getSimpleName()
-                : symbol.getPackageName().isEmpty()
+                ? simpleName
+                : packageName.isEmpty()
                 ? canoName
-                : canoName.substring(symbol.getPackageName().length() + 1); //+1 for the dot
+                : canoName.substring(packageName.length() + 1); //+1 for the dot
     }
 }
