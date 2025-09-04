@@ -721,7 +721,7 @@
                             </excludes>
                             <endWithNewline/>
                             <removeUnusedImports/>
-                            <removeWildcardImports/>
+                            <!--<removeWildcardImports/>-->
                             <trimTrailingWhitespace/>
                             <licenseHeader>
                                 <file>${project.basedir}/config/java.header</file>
