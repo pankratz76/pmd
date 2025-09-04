@@ -732,9 +732,6 @@
                     <configuration>
                         <formats>
                             <format>
-                                <excludes>
-                                    <exclude>**testdata**</exclude>
-                                </excludes>
                                 <includes>
                                     <include>.gitignore</include>
                                 </includes>
@@ -744,8 +741,8 @@
                         </formats>
                         <java>
                             <excludes>
-                                <exclude>**testdata**</exclude>
-                                <exclude>**unnecessaryimport/package1/U.java</exclude>
+                                <exclude>**/testdata/**</exclude>
+                                <exclude>**U.java</exclude>
                             </excludes>
                             <!--<endWithNewline/>-->
                             <!--<removeWildcardImports/>-->
