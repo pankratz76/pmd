@@ -744,7 +744,8 @@
                         </formats>
                         <java>
                             <excludes>
-                                <exclude>**/src/main/java/net/sourceforge/pmd/lang/java/types/package-info.java</exclude>
+                                <exclude>**/src/main/java/net/sourceforge/pmd/lang/java/types/package-info.java
+                                </exclude>
                                 <exclude>**/testdata/**</exclude>
                                 <exclude>**/unnecessaryimport/package1/U.java</exclude>
                             </excludes>
@@ -752,15 +753,15 @@
                             <removeUnusedImports/>
                             <!--<removeWildcardImports/>-->
                             <trimTrailingWhitespace/>
-<!--<licenseHeader>-->
-<!--    <file>${project.basedir}/config/java.header</file>-->
-<!--</licenseHeader>-->
-<!--<importOrder>-->
-<!--    <file>${project.basedir}/.import.order</file>-->
-<!--</importOrder>-->
+                            <!--<licenseHeader>-->
+                            <!--    <file>${project.basedir}/config/java.header</file>-->
+                            <!--</licenseHeader>-->
+                            <!--<importOrder>-->
+                            <!--    <file>${project.basedir}/.import.order</file>-->
+                            <!--</importOrder>-->
                         </java>
                         <pom>
-                            <sortPom/>
+                            <!--<sortPom/>-->
                         </pom>
                     </configuration>
                 </plugin>
