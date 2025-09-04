@@ -733,7 +733,7 @@
                         <formats>
                             <format>
                                 <excludes>
-                                    <exclude>**/testdata/**</exclude>
+                                    <exclude>**testdata**</exclude>
                                 </excludes>
                                 <includes>
                                     <include>.gitignore</include>
@@ -744,10 +744,8 @@
                         </formats>
                         <java>
                             <excludes>
-                                <exclude>**/src/main/java/net/sourceforge/pmd/lang/java/types/package-info.java
-                                </exclude>
-                                <exclude>**/testdata/**</exclude>
-                                <exclude>**/unnecessaryimport/package1/U.java</exclude>
+                                <exclude>**testdata**</exclude>
+                                <exclude>**unnecessaryimport/package1/U.java</exclude>
                             </excludes>
                             <!--<endWithNewline/>-->
                             <!--<removeWildcardImports/>-->
