@@ -75,7 +75,7 @@ class ApexParserTest extends ApexParserTestBase {
     }
 
     private void assertLineNumbersForTestCode(ASTUserClassOrInterface<?> classNode) {
-        
+
         // identifier: "SimpleClass"
         assertEquals("SimpleClass", classNode.getSimpleName());
         // Class location starts at the "class" keyword. (It excludes modifiers.)
@@ -83,7 +83,7 @@ class ApexParserTest extends ApexParserTestBase {
         // "public" modifier for class
         assertPosition(classNode.getChild(0), 1, 1, 1, 7);
 
-        // identifier: "method1"                                                                                                                                                                  
+        // identifier: "method1"
         Node method1 = classNode.getChild(1);
         assertEquals("method1", ((ASTMethod) method1).getCanonicalName());
         // "method1" - spans from return type to end of its block statement. (It excludes modifiers.)
@@ -199,7 +199,7 @@ class ApexParserTest extends ApexParserTestBase {
 
         ASTUserClassOrInterface<?> classNode = rootNode.getMainNode();
         assertEquals("InnerClassLocations", classNode.getSimpleName());
-        // Class location starts at the "class" keyword. (It excludes any modifiers.)                                                                                                             
+        // Class location starts at the "class" keyword. (It excludes any modifiers.)
         assertPosition(classNode, 1, 8, 16, 2);
 
         List<ASTUserClass> classes = classNode.descendants(ASTUserClass.class).toList();

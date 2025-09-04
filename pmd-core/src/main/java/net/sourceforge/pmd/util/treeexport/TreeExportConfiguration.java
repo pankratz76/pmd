@@ -47,7 +47,7 @@ public class TreeExportConfiguration extends AbstractConfiguration {
     public Properties getProperties() {
         return properties;
     }
-    
+
     public Path getFile() {
         return file;
     }
@@ -59,15 +59,15 @@ public class TreeExportConfiguration extends AbstractConfiguration {
     public boolean isReadStdin() {
         return readStdin;
     }
-    
+
     public void setFormat(String format) {
         this.format = format;
     }
-    
+
     public void setLanguage(Language language) {
         this.language = language;
     }
-    
+
     public void setProperties(Properties properties) {
         this.properties = properties;
     }
@@ -79,7 +79,7 @@ public class TreeExportConfiguration extends AbstractConfiguration {
     public void setFile(Path file) {
         this.file = file;
     }
-    
+
     public void setReadStdin(boolean readStdin) {
         this.readStdin = readStdin;
     }

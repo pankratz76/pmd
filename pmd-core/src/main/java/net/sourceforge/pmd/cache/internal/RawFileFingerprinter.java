@@ -22,11 +22,11 @@ import net.sourceforge.pmd.internal.util.IOUtil;
  * Base fingerprinter for raw files.
  */
 public class RawFileFingerprinter implements ClasspathEntryFingerprinter {
-    
+
     private static final Logger LOG = LoggerFactory.getLogger(RawFileFingerprinter.class);
-    
+
     private static final Set<String> SUPPORTED_EXTENSIONS;
-    
+
     static {
         final Set<String> extensions = new HashSet<>();
         extensions.add("class"); // Java class files

@@ -58,7 +58,7 @@ class SymbolicValueTest {
     static SymbolicValue symValueOf(Object o) {
         return SymbolicValue.of(TS, o);
     }
-    
+
     static SymbolicValue ofArray(SymbolicValue... values) {
         return SymArray.forElements(Arrays.asList(values.clone()));
     }

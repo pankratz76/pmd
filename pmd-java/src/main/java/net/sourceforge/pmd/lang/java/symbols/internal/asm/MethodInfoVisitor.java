@@ -20,7 +20,7 @@ class MethodInfoVisitor extends MethodVisitor {
         super(AsmSymbolResolver.ASM_API_V);
         this.execStub = execStub;
     }
-    
+
     @Override
     public AnnotationVisitor visitAnnotationDefault() {
         return new SymbolicValueBuilder(execStub.getResolver()) {

@@ -32,9 +32,9 @@ public abstract class AbstractPmdSubcommand implements Callable<Integer> {
 
     /**
      * Extension point to validate provided configuration.
-     * 
+     *
      * Implementations must throw {@code ParameterException} upon a violation.
-     * 
+     *
      * @throws ParameterException
      */
     protected void validate() throws ParameterException {

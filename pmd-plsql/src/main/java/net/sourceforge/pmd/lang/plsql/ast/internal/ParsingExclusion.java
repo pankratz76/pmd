@@ -29,7 +29,7 @@ public final class ParsingExclusion {
         int i2 = sourceUpper.indexOf("\n");
         String reason = source.substring(i1 + LEN_BEGIN_MARKER, i2).trim();
         if (reason.startsWith(":")) {
-            this.reason = reason.substring(2).trim(); 
+            this.reason = reason.substring(2).trim();
         } else {
             this.reason = null;
         }

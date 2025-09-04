@@ -47,7 +47,7 @@ final class AstMethodSym
         if (node.getDefaultClause() != null) {
             return AstSymbolicAnnot.ofNode(node.getDefaultClause().getConstant());
         }
-        
+
         return null;
     }
 }

@@ -18,7 +18,7 @@ import net.sf.saxon.expr.sort.DocumentSorter;
 
 /**
  * Splits a venn expression with the union operator into single expressions.
- * 
+ *
  * <p>E.g. "//A | //B | //C" will result in 3 expressions "//A", "//B", and "//C".
  */
 class SplitUnions extends SaxonExprVisitor {

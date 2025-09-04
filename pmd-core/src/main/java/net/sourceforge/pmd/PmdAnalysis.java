@@ -401,7 +401,7 @@ public final class PmdAnalysis implements AutoCloseable {
                                                          GlobalAnalysisListener.tee(listeners),
                                                          GlobalAnalysisListener.tee(extraListeners),
                                                          cacheListener));
-            
+
             // Initialize listeners
             try (ListenerInitializer initializer = listener.initializer()) {
                 initializer.setNumberOfFilesToAnalyze(textFiles.size());

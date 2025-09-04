@@ -41,12 +41,12 @@ import net.sourceforge.pmd.lang.rule.RuleTargetSelector;
  *
  */
 public class ApexSOQLInjectionRule extends AbstractApexRule {
-    private static final Set<String> SAFE_VARIABLE_TYPES = 
+    private static final Set<String> SAFE_VARIABLE_TYPES =
         Collections.unmodifiableSet(Stream.of(
             "double", "long", "decimal", "boolean", "id", "integer",
             "sobjecttype", "schema.sobjecttype", "sobjectfield", "schema.sobjectfield"
         ).collect(Collectors.toSet()));
-    
+
     private static final String JOIN = "join";
     private static final String ESCAPE_SINGLE_QUOTES = "escapeSingleQuotes";
     private static final String STRING = "String";

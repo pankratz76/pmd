@@ -31,7 +31,7 @@ final class HtmlTreeBuilder {
 
         return root;
     }
-    
+
     private void addChildren(AbstractHtmlNode<?> parent, Node node) {
         for (Node child : node.childNodes()) {
             AbstractHtmlNode<?> converted = convertJsoupNode(child);

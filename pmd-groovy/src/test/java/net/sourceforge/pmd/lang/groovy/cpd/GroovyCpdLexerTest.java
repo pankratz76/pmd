@@ -18,7 +18,7 @@ class GroovyCpdLexerTest extends CpdTextComparisonTest {
     void testSample() {
         doTest("sample");
     }
-    
+
     @Test
     void testCpdOffAndOn() {
         doTest("cpdoff");

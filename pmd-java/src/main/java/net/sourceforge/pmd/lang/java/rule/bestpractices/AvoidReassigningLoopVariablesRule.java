@@ -215,7 +215,7 @@ public class AvoidReassigningLoopVariablesRule extends AbstractJavaRulechainRule
             if (expr.getAccessType() != AccessType.WRITE) {
                 return false;
             }
-            
+
             if (expr.getParent() instanceof ASTAssignmentExpression) {
                 // Check for simple assignment operations: i += 1, i -= 1, i = i + 1, i = i - 1
                 ASTAssignmentExpression assignment = (ASTAssignmentExpression) expr.getParent();
@@ -226,7 +226,7 @@ public class AvoidReassigningLoopVariablesRule extends AbstractJavaRulechainRule
                 // Check for unary increment/decrement: i++, ++i, i--, --i
                 return JavaAstUtils.isVarAccessReadAndWrite(expr);
             }
-            
+
             return false;
         }
 
@@ -237,13 +237,13 @@ public class AvoidReassigningLoopVariablesRule extends AbstractJavaRulechainRule
                 ASTExpression rhs = assignment.getRightOperand();
                 return (op == AssignmentOp.ADD_ASSIGN || op == AssignmentOp.SUB_ASSIGN) && isLiteralOne(rhs);
             }
-            
+
             if (assignment.getOperator() == AssignmentOp.ASSIGN) {
                 // Check for i = i + 1 or i = i - 1
                 ASTExpression rhs = assignment.getRightOperand();
                 return isSimpleIncrementExpression(rhs, varName);
             }
-            
+
             return false;
         }
 
@@ -259,16 +259,16 @@ public class AvoidReassigningLoopVariablesRule extends AbstractJavaRulechainRule
             if (expr instanceof ASTInfixExpression) {
                 ASTInfixExpression infixExpr = (ASTInfixExpression) expr;
                 BinaryOp operator = infixExpr.getOperator();
-                
+
                 if (operator == BinaryOp.ADD || operator == BinaryOp.SUB) {
                     ASTExpression left = infixExpr.getLeftOperand();
                     ASTExpression right = infixExpr.getRightOperand();
-                    
+
                     // Check i + 1 or i - 1
                     if (isVariableReference(left, varName) && isLiteralOne(right)) {
                         return true;
                     }
-                    
+
                     // Check 1 + i (only for addition)
                     if (operator == BinaryOp.ADD && isLiteralOne(left) && isVariableReference(right, varName)) {
                         return true;

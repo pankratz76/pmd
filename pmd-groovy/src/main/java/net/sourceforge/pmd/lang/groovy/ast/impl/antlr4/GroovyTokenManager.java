@@ -18,7 +18,7 @@ import groovyjarjarantlr4.v4.runtime.Recognizer;
 
 /**
  * A Groovy specific token manager.
- * 
+ *
  * This is simply a copy of {@link AntlrTokenManager} but
  * referencing the jarjared version of antlr4 used by the groovy lexer.
  */
@@ -57,7 +57,7 @@ public class GroovyTokenManager implements TokenManager<GroovyToken> {
         } else {
             previousComment = null;
         }
-        
+
         final GroovyToken currentToken = new GroovyToken(lexer.nextToken(), previousComment, textDoc);
         if (previousToken != null) {
             previousToken.next = currentToken;

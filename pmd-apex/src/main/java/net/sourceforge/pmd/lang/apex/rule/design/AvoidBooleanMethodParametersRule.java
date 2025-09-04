@@ -14,20 +14,20 @@ import net.sourceforge.pmd.lang.rule.RuleTargetSelector;
 
 /**
  * Rule that detects boolean parameters in public and global Apex methods.
- * 
+ *
  * <p>
  * Boolean parameters can make method calls difficult to understand and
  * maintain. They often indicate that a method is doing more than one thing and
  * could benefit from being split into separate methods with more descriptive
  * names.
  * </p>
- * 
+ *
  * <p>
  * This rule flags any boolean parameters found in public or global methods,
  * encouraging developers to use more expressive alternatives such as enums,
  * separate methods, or configuration objects.
  * </p>
- * 
+ *
  * @see <a href="https://github.com/pmd/pmd/issues/5427">[apex] New Rule: Avoid Boolean Method Parameters #5427</a>
  * @since 7.15.0
  */
@@ -38,7 +38,7 @@ public class AvoidBooleanMethodParametersRule extends AbstractApexRule {
     /**
      * Visits an Apex method node and checks for boolean global/public
      * parameters.
-     * 
+     *
      * @param theMethod
      *            the method node being visited
      * @param data
@@ -57,12 +57,12 @@ public class AvoidBooleanMethodParametersRule extends AbstractApexRule {
 
     /**
      * Builds the target selector for this rule.
-     * 
+     *
      * <p>
      * This rule targets Apex method nodes ({@link ASTMethod}) since it needs to
      * analyze method parameters for boolean types.
      * </p>
-     * 
+     *
      * @return a rule target selector configured for ASTMethod nodes
      */
     @Override

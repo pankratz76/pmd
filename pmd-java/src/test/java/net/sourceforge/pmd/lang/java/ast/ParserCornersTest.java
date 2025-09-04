@@ -179,7 +179,7 @@ class ParserCornersTest extends BaseJavaTreeDumpTest {
                 + "  \"\"\";\n"
                 + "}");
     }
-    
+
     /**
      * Tests a specific generic notation for calling methods. See:
      * https://jira.codehaus.org/browse/MPMD-139

@@ -19,7 +19,7 @@ package net.sourceforge.pmd.lang.java.ast;
  *           | {@linkplain ASTUnnamedPattern UnnamedPattern}
  *
  * </pre>
- * 
+ *
  * @see <a href="https://openjdk.org/jeps/394">JEP 394: Pattern Matching for instanceof</a> (Java 16)
  * @see <a href="https://openjdk.org/jeps/440">JEP 440: Record Patterns</a> (Java 21)
  */

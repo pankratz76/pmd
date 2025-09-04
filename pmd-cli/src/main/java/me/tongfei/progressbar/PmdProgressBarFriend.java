@@ -12,7 +12,7 @@ import java.io.PrintStream;
  * This is a friend class for me.tongfei.progressbar, as TerminalUtils is package-private.
  */
 public final class PmdProgressBarFriend {
-    
+
     private PmdProgressBarFriend() {
         throw new AssertionError("Can't instantiate utility classes");
     }
@@ -22,7 +22,7 @@ public final class PmdProgressBarFriend {
             ? new InteractiveConsoleProgressBarConsumer(ps)
             : new PostCarriageReturnConsoleProgressBarConsumer(ps);
     }
-    
+
     private static class PostCarriageReturnConsoleProgressBarConsumer extends ConsoleProgressBarConsumer {
 
         PostCarriageReturnConsoleProgressBarConsumer(PrintStream out) {
@@ -34,7 +34,7 @@ public final class PmdProgressBarFriend {
             // Set the carriage return at the end instead of at the beginning
             out.print(StringDisplayUtils.trimDisplayLength(str, getMaxRenderedLength()) + CARRIAGE_RETURN);
         }
-        
+
         @Override
         public void clear() {
             // do nothing (prints an empty line otherwise)

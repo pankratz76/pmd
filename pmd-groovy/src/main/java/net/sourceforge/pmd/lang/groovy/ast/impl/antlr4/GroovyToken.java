@@ -15,7 +15,7 @@ import groovyjarjarantlr4.v4.runtime.Token;
 
 /**
  * A Groovy specific token representation.
- * 
+ *
  * This is simply a copy of {@link AntlrToken} but
  * referencing the jarjared version of antlr4 used by the groovy lexer.
  */

@@ -176,7 +176,7 @@ public class InsufficientStringBufferDeclarationRule extends AbstractJavaRulecha
                     counter += 1;
                 }
             }
-    
+
             ASTIfStatement ifStatement = methodCall.ancestors(ASTIfStatement.class).first();
             ASTSwitchStatement switchStatement = methodCall.ancestors(ASTSwitchStatement.class).first();
             if (ifStatement != null) {

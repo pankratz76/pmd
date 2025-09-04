@@ -37,5 +37,5 @@ class DesignerVersionProvider implements IVersionProvider {
     public String[] getVersion() throws Exception {
         return new String[] { "PMD Rule Designer " + DesignerVersion.getCurrentVersion() };
     }
-    
+
 }

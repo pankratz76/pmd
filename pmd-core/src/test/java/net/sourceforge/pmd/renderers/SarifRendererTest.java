@@ -83,7 +83,7 @@ class SarifRendererTest extends AbstractRendererTest {
 
     /**
      * Multiple occurrences of the same rule should be reported as individual results.
-     * 
+     *
      * @see <a href="https://github.com/pmd/pmd/issues/3768"> [core] SARIF formatter reports multiple locations
      *      when it should report multiple results #3768</a>
      */

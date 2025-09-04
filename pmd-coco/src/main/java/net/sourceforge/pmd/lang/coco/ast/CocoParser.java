@@ -42,69 +42,69 @@ import org.antlr.v4.runtime.tree.TerminalNode;
 	protected static final PredictionContextCache _sharedContextCache =
 		new PredictionContextCache();
 	public static final int
-		AFTER=1, AS=2, ASSERT=3, ATTRIBUTE=4, BECOME=5, BREAK=6, CASE=7, COMPONENT=8, 
-		CONTINUE=9, ELSE=10, ENUM=11, ENTRY=12, EXECUTION=13, EXIT=14, EXTERNAL=15, 
-		FINAL=16, FOR=17, FUNCTION=18, IF=19, ILLEGAL=20, IMPORT=21, IN=22, INIT=23, 
-		INSTANCE=24, MACHINE=25, MATCH=26, MUT=27, MUTATING=28, NONDET=29, OFFER=30, 
-		OPTIONAL=31, OTHERWISE=32, OUT=33, OUTGOING=34, PERIODIC=35, PORT=36, 
-		PRIVATE=37, RETURN=38, SIGNAL=39, SPONTANEOUS=40, STATE=41, STATIC=42, 
-		STRUCT=43, TYPE=44, UNQUALIFIED=45, VAL=46, VAR=47, WHERE=48, WHILE=49, 
-		IDENTIFIER=50, AT=51, ASSIGN=52, COLON=53, LP=54, RP=55, LC=56, RC=57, 
-		LB=58, RB=59, COMMA=60, SEMI=61, DOT=62, LT=63, GT=64, MUL=65, DIV=66, 
-		MINUS=67, MOD=68, PLUS=69, IMPL=70, ARROW=71, AMP=72, QM=73, PIPE=74, 
-		EXCL=75, ELLIP=76, EQ=77, NE=78, OR=79, AND=80, LE=81, GE=82, WHITESPACE=83, 
-		NEWLINE=84, LINE_COMMENT=85, BLOCK_COMMENT=86, INTEGER=87, BACKTICK_LITERAL=88, 
+		AFTER=1, AS=2, ASSERT=3, ATTRIBUTE=4, BECOME=5, BREAK=6, CASE=7, COMPONENT=8,
+		CONTINUE=9, ELSE=10, ENUM=11, ENTRY=12, EXECUTION=13, EXIT=14, EXTERNAL=15,
+		FINAL=16, FOR=17, FUNCTION=18, IF=19, ILLEGAL=20, IMPORT=21, IN=22, INIT=23,
+		INSTANCE=24, MACHINE=25, MATCH=26, MUT=27, MUTATING=28, NONDET=29, OFFER=30,
+		OPTIONAL=31, OTHERWISE=32, OUT=33, OUTGOING=34, PERIODIC=35, PORT=36,
+		PRIVATE=37, RETURN=38, SIGNAL=39, SPONTANEOUS=40, STATE=41, STATIC=42,
+		STRUCT=43, TYPE=44, UNQUALIFIED=45, VAL=46, VAR=47, WHERE=48, WHILE=49,
+		IDENTIFIER=50, AT=51, ASSIGN=52, COLON=53, LP=54, RP=55, LC=56, RC=57,
+		LB=58, RB=59, COMMA=60, SEMI=61, DOT=62, LT=63, GT=64, MUL=65, DIV=66,
+		MINUS=67, MOD=68, PLUS=69, IMPL=70, ARROW=71, AMP=72, QM=73, PIPE=74,
+		EXCL=75, ELLIP=76, EQ=77, NE=78, OR=79, AND=80, LE=81, GE=82, WHITESPACE=83,
+		NEWLINE=84, LINE_COMMENT=85, BLOCK_COMMENT=86, INTEGER=87, BACKTICK_LITERAL=88,
 		CHAR_LITERAL=89, STRING_LITERAL=90;
 	public static final int
-		RULE_module = 0, RULE_declaration = 1, RULE_attribute = 2, RULE_attributeDeclaration = 3, 
-		RULE_importDeclaration = 4, RULE_variableDeclaration = 5, RULE_enumDeclaration = 6, 
-		RULE_structDeclaration = 7, RULE_typeAliasDeclaration = 8, RULE_functionDeclaration = 9, 
-		RULE_instanceDeclaration = 10, RULE_portDeclaration = 11, RULE_componentDeclaration = 12, 
-		RULE_externalConstantDeclaration = 13, RULE_externalTypeDeclaration = 14, 
-		RULE_externalTypeElement = 15, RULE_externalFunctionDeclaration = 16, 
-		RULE_genericTypeDeclaration = 17, RULE_genericTypes = 18, RULE_genericType = 19, 
-		RULE_enumElement = 20, RULE_enumCase = 21, RULE_caseParameters = 22, RULE_caseParameter = 23, 
-		RULE_structElement = 24, RULE_fieldDeclaration = 25, RULE_componentElement = 26, 
-		RULE_staticMemberDeclaration = 27, RULE_constructorDeclaration = 28, RULE_expression = 29, 
-		RULE_blockExpression_ = 30, RULE_ifExpression_ = 31, RULE_matchExpression_ = 32, 
-		RULE_nondetExpression_ = 33, RULE_fieldAssignments = 34, RULE_fieldAssignment = 35, 
-		RULE_nondetClauses = 36, RULE_nondetClause = 37, RULE_matchClauses = 38, 
-		RULE_matchClause = 39, RULE_pattern = 40, RULE_enumCasePattern = 41, RULE_idParameterPatterns = 42, 
-		RULE_idParameterPattern = 43, RULE_variableDeclarationPattern = 44, RULE_parameterPatterns = 45, 
-		RULE_parameterPattern = 46, RULE_expressions = 47, RULE_statement = 48, 
-		RULE_declarationStatement = 49, RULE_returnStatement = 50, RULE_becomeStatement = 51, 
-		RULE_whileStatement = 52, RULE_forStatement = 53, RULE_breakStatement = 54, 
-		RULE_continueStatement = 55, RULE_portElement = 56, RULE_functionInterfaceDeclaration = 57, 
-		RULE_signalDeclaration = 58, RULE_stateMachineDeclaration = 59, RULE_stateMachineElement = 60, 
-		RULE_stateDeclaration = 61, RULE_eventStateDeclaration = 62, RULE_executionStateDeclaration = 63, 
-		RULE_eventStateElement = 64, RULE_entryFunctionDeclaration = 65, RULE_exitFunctionDeclaration = 66, 
-		RULE_stateInvariant = 67, RULE_transitionDeclaration = 68, RULE_eventTransition = 69, 
-		RULE_eventSource = 70, RULE_spontaneousTransition = 71, RULE_timerTransition = 72, 
-		RULE_eventHandler = 73, RULE_offer = 74, RULE_offerClauses = 75, RULE_offerClause = 76, 
-		RULE_parameters = 77, RULE_parameter = 78, RULE_literalExpression_ = 79, 
+		RULE_module = 0, RULE_declaration = 1, RULE_attribute = 2, RULE_attributeDeclaration = 3,
+		RULE_importDeclaration = 4, RULE_variableDeclaration = 5, RULE_enumDeclaration = 6,
+		RULE_structDeclaration = 7, RULE_typeAliasDeclaration = 8, RULE_functionDeclaration = 9,
+		RULE_instanceDeclaration = 10, RULE_portDeclaration = 11, RULE_componentDeclaration = 12,
+		RULE_externalConstantDeclaration = 13, RULE_externalTypeDeclaration = 14,
+		RULE_externalTypeElement = 15, RULE_externalFunctionDeclaration = 16,
+		RULE_genericTypeDeclaration = 17, RULE_genericTypes = 18, RULE_genericType = 19,
+		RULE_enumElement = 20, RULE_enumCase = 21, RULE_caseParameters = 22, RULE_caseParameter = 23,
+		RULE_structElement = 24, RULE_fieldDeclaration = 25, RULE_componentElement = 26,
+		RULE_staticMemberDeclaration = 27, RULE_constructorDeclaration = 28, RULE_expression = 29,
+		RULE_blockExpression_ = 30, RULE_ifExpression_ = 31, RULE_matchExpression_ = 32,
+		RULE_nondetExpression_ = 33, RULE_fieldAssignments = 34, RULE_fieldAssignment = 35,
+		RULE_nondetClauses = 36, RULE_nondetClause = 37, RULE_matchClauses = 38,
+		RULE_matchClause = 39, RULE_pattern = 40, RULE_enumCasePattern = 41, RULE_idParameterPatterns = 42,
+		RULE_idParameterPattern = 43, RULE_variableDeclarationPattern = 44, RULE_parameterPatterns = 45,
+		RULE_parameterPattern = 46, RULE_expressions = 47, RULE_statement = 48,
+		RULE_declarationStatement = 49, RULE_returnStatement = 50, RULE_becomeStatement = 51,
+		RULE_whileStatement = 52, RULE_forStatement = 53, RULE_breakStatement = 54,
+		RULE_continueStatement = 55, RULE_portElement = 56, RULE_functionInterfaceDeclaration = 57,
+		RULE_signalDeclaration = 58, RULE_stateMachineDeclaration = 59, RULE_stateMachineElement = 60,
+		RULE_stateDeclaration = 61, RULE_eventStateDeclaration = 62, RULE_executionStateDeclaration = 63,
+		RULE_eventStateElement = 64, RULE_entryFunctionDeclaration = 65, RULE_exitFunctionDeclaration = 66,
+		RULE_stateInvariant = 67, RULE_transitionDeclaration = 68, RULE_eventTransition = 69,
+		RULE_eventSource = 70, RULE_spontaneousTransition = 71, RULE_timerTransition = 72,
+		RULE_eventHandler = 73, RULE_offer = 74, RULE_offerClauses = 75, RULE_offerClause = 76,
+		RULE_parameters = 77, RULE_parameter = 78, RULE_literalExpression_ = 79,
 		RULE_type = 80, RULE_types = 81, RULE_dotIdentifierList = 82;
 	private static String[] makeRuleNames() {
 		return new String[] {
-			"module", "declaration", "attribute", "attributeDeclaration", "importDeclaration", 
-			"variableDeclaration", "enumDeclaration", "structDeclaration", "typeAliasDeclaration", 
-			"functionDeclaration", "instanceDeclaration", "portDeclaration", "componentDeclaration", 
-			"externalConstantDeclaration", "externalTypeDeclaration", "externalTypeElement", 
-			"externalFunctionDeclaration", "genericTypeDeclaration", "genericTypes", 
-			"genericType", "enumElement", "enumCase", "caseParameters", "caseParameter", 
-			"structElement", "fieldDeclaration", "componentElement", "staticMemberDeclaration", 
-			"constructorDeclaration", "expression", "blockExpression_", "ifExpression_", 
-			"matchExpression_", "nondetExpression_", "fieldAssignments", "fieldAssignment", 
-			"nondetClauses", "nondetClause", "matchClauses", "matchClause", "pattern", 
-			"enumCasePattern", "idParameterPatterns", "idParameterPattern", "variableDeclarationPattern", 
-			"parameterPatterns", "parameterPattern", "expressions", "statement", 
-			"declarationStatement", "returnStatement", "becomeStatement", "whileStatement", 
-			"forStatement", "breakStatement", "continueStatement", "portElement", 
-			"functionInterfaceDeclaration", "signalDeclaration", "stateMachineDeclaration", 
-			"stateMachineElement", "stateDeclaration", "eventStateDeclaration", "executionStateDeclaration", 
-			"eventStateElement", "entryFunctionDeclaration", "exitFunctionDeclaration", 
-			"stateInvariant", "transitionDeclaration", "eventTransition", "eventSource", 
-			"spontaneousTransition", "timerTransition", "eventHandler", "offer", 
-			"offerClauses", "offerClause", "parameters", "parameter", "literalExpression_", 
+			"module", "declaration", "attribute", "attributeDeclaration", "importDeclaration",
+			"variableDeclaration", "enumDeclaration", "structDeclaration", "typeAliasDeclaration",
+			"functionDeclaration", "instanceDeclaration", "portDeclaration", "componentDeclaration",
+			"externalConstantDeclaration", "externalTypeDeclaration", "externalTypeElement",
+			"externalFunctionDeclaration", "genericTypeDeclaration", "genericTypes",
+			"genericType", "enumElement", "enumCase", "caseParameters", "caseParameter",
+			"structElement", "fieldDeclaration", "componentElement", "staticMemberDeclaration",
+			"constructorDeclaration", "expression", "blockExpression_", "ifExpression_",
+			"matchExpression_", "nondetExpression_", "fieldAssignments", "fieldAssignment",
+			"nondetClauses", "nondetClause", "matchClauses", "matchClause", "pattern",
+			"enumCasePattern", "idParameterPatterns", "idParameterPattern", "variableDeclarationPattern",
+			"parameterPatterns", "parameterPattern", "expressions", "statement",
+			"declarationStatement", "returnStatement", "becomeStatement", "whileStatement",
+			"forStatement", "breakStatement", "continueStatement", "portElement",
+			"functionInterfaceDeclaration", "signalDeclaration", "stateMachineDeclaration",
+			"stateMachineElement", "stateDeclaration", "eventStateDeclaration", "executionStateDeclaration",
+			"eventStateElement", "entryFunctionDeclaration", "exitFunctionDeclaration",
+			"stateInvariant", "transitionDeclaration", "eventTransition", "eventSource",
+			"spontaneousTransition", "timerTransition", "eventHandler", "offer",
+			"offerClauses", "offerClause", "parameters", "parameter", "literalExpression_",
 			"type", "types", "dotIdentifierList"
 		};
 	}
@@ -112,34 +112,34 @@ import org.antlr.v4.runtime.tree.TerminalNode;
 
 	private static String[] makeLiteralNames() {
 		return new String[] {
-			null, "'after'", "'as'", "'assert'", "'attribute'", "'become'", "'break'", 
-			"'case'", "'component'", "'continue'", "'else'", "'enum'", "'entry'", 
-			"'execution'", "'exit'", "'external'", "'final'", "'for'", "'function'", 
-			"'if'", "'illegal'", "'import'", "'in'", "'init'", "'instance'", "'machine'", 
-			"'match'", "'mut'", "'mutating'", "'nondet'", "'offer'", "'optional'", 
-			"'otherwise'", "'out'", "'outgoing'", "'periodic'", "'port'", "'private'", 
-			"'return'", "'signal'", "'spontaneous'", "'state'", "'static'", "'struct'", 
-			"'type'", "'unqualified'", "'val'", "'var'", "'where'", "'while'", null, 
-			"'@'", "'='", "':'", "'('", "')'", "'{'", "'}'", "'['", "']'", "','", 
-			"';'", "'.'", "'<'", "'>'", "'*'", "'/'", "'-'", "'%'", "'+'", "'=>'", 
-			"'->'", "'&'", "'?'", "'|'", "'!'", "'...'", "'=='", "'!='", "'||'", 
+			null, "'after'", "'as'", "'assert'", "'attribute'", "'become'", "'break'",
+			"'case'", "'component'", "'continue'", "'else'", "'enum'", "'entry'",
+			"'execution'", "'exit'", "'external'", "'final'", "'for'", "'function'",
+			"'if'", "'illegal'", "'import'", "'in'", "'init'", "'instance'", "'machine'",
+			"'match'", "'mut'", "'mutating'", "'nondet'", "'offer'", "'optional'",
+			"'otherwise'", "'out'", "'outgoing'", "'periodic'", "'port'", "'private'",
+			"'return'", "'signal'", "'spontaneous'", "'state'", "'static'", "'struct'",
+			"'type'", "'unqualified'", "'val'", "'var'", "'where'", "'while'", null,
+			"'@'", "'='", "':'", "'('", "')'", "'{'", "'}'", "'['", "']'", "','",
+			"';'", "'.'", "'<'", "'>'", "'*'", "'/'", "'-'", "'%'", "'+'", "'=>'",
+			"'->'", "'&'", "'?'", "'|'", "'!'", "'...'", "'=='", "'!='", "'||'",
 			"'&&'", "'<='", "'>='"
 		};
 	}
 	private static final String[] _LITERAL_NAMES = makeLiteralNames();
 	private static String[] makeSymbolicNames() {
 		return new String[] {
-			null, "AFTER", "AS", "ASSERT", "ATTRIBUTE", "BECOME", "BREAK", "CASE", 
-			"COMPONENT", "CONTINUE", "ELSE", "ENUM", "ENTRY", "EXECUTION", "EXIT", 
-			"EXTERNAL", "FINAL", "FOR", "FUNCTION", "IF", "ILLEGAL", "IMPORT", "IN", 
-			"INIT", "INSTANCE", "MACHINE", "MATCH", "MUT", "MUTATING", "NONDET", 
-			"OFFER", "OPTIONAL", "OTHERWISE", "OUT", "OUTGOING", "PERIODIC", "PORT", 
-			"PRIVATE", "RETURN", "SIGNAL", "SPONTANEOUS", "STATE", "STATIC", "STRUCT", 
-			"TYPE", "UNQUALIFIED", "VAL", "VAR", "WHERE", "WHILE", "IDENTIFIER", 
-			"AT", "ASSIGN", "COLON", "LP", "RP", "LC", "RC", "LB", "RB", "COMMA", 
-			"SEMI", "DOT", "LT", "GT", "MUL", "DIV", "MINUS", "MOD", "PLUS", "IMPL", 
-			"ARROW", "AMP", "QM", "PIPE", "EXCL", "ELLIP", "EQ", "NE", "OR", "AND", 
-			"LE", "GE", "WHITESPACE", "NEWLINE", "LINE_COMMENT", "BLOCK_COMMENT", 
+			null, "AFTER", "AS", "ASSERT", "ATTRIBUTE", "BECOME", "BREAK", "CASE",
+			"COMPONENT", "CONTINUE", "ELSE", "ENUM", "ENTRY", "EXECUTION", "EXIT",
+			"EXTERNAL", "FINAL", "FOR", "FUNCTION", "IF", "ILLEGAL", "IMPORT", "IN",
+			"INIT", "INSTANCE", "MACHINE", "MATCH", "MUT", "MUTATING", "NONDET",
+			"OFFER", "OPTIONAL", "OTHERWISE", "OUT", "OUTGOING", "PERIODIC", "PORT",
+			"PRIVATE", "RETURN", "SIGNAL", "SPONTANEOUS", "STATE", "STATIC", "STRUCT",
+			"TYPE", "UNQUALIFIED", "VAL", "VAR", "WHERE", "WHILE", "IDENTIFIER",
+			"AT", "ASSIGN", "COLON", "LP", "RP", "LC", "RC", "LB", "RB", "COMMA",
+			"SEMI", "DOT", "LT", "GT", "MUL", "DIV", "MINUS", "MOD", "PLUS", "IMPL",
+			"ARROW", "AMP", "QM", "PIPE", "EXCL", "ELLIP", "EQ", "NE", "OR", "AND",
+			"LE", "GE", "WHITESPACE", "NEWLINE", "LINE_COMMENT", "BLOCK_COMMENT",
 			"INTEGER", "BACKTICK_LITERAL", "CHAR_LITERAL", "STRING_LITERAL"
 		};
 	}
@@ -2689,7 +2689,7 @@ import org.antlr.v4.runtime.tree.TerminalNode;
 			super(parent, invokingState);
 		}
 		@Override public int getRuleIndex() { return RULE_expression; }
-	 
+
 		public ExpressionContext() { }
 		public void copyFrom(ExpressionContext ctx) {
 			super.copyFrom(ctx);
@@ -3543,7 +3543,7 @@ import org.antlr.v4.runtime.tree.TerminalNode;
 						}
 						break;
 					}
-					} 
+					}
 				}
 				setState(561);
 				_errHandler.sync(this);
@@ -3614,7 +3614,7 @@ import org.antlr.v4.runtime.tree.TerminalNode;
 					setState(563);
 					statement();
 					}
-					} 
+					}
 				}
 				setState(568);
 				_errHandler.sync(this);
@@ -3941,7 +3941,7 @@ import org.antlr.v4.runtime.tree.TerminalNode;
 					setState(609);
 					fieldAssignment();
 					}
-					} 
+					}
 				}
 				setState(614);
 				_errHandler.sync(this);
@@ -4086,7 +4086,7 @@ import org.antlr.v4.runtime.tree.TerminalNode;
 					setState(624);
 					nondetClause();
 					}
-					} 
+					}
 				}
 				setState(629);
 				_errHandler.sync(this);
@@ -4255,7 +4255,7 @@ import org.antlr.v4.runtime.tree.TerminalNode;
 					setState(644);
 					matchClause();
 					}
-					} 
+					}
 				}
 				setState(649);
 				_errHandler.sync(this);
@@ -6832,7 +6832,7 @@ import org.antlr.v4.runtime.tree.TerminalNode;
 					setState(949);
 					match(DOT);
 					}
-					} 
+					}
 				}
 				setState(955);
 				_errHandler.sync(this);
@@ -7318,7 +7318,7 @@ import org.antlr.v4.runtime.tree.TerminalNode;
 					setState(1013);
 					offerClause();
 					}
-					} 
+					}
 				}
 				setState(1018);
 				_errHandler.sync(this);
@@ -7664,7 +7664,7 @@ import org.antlr.v4.runtime.tree.TerminalNode;
 			super(parent, invokingState);
 		}
 		@Override public int getRuleIndex() { return RULE_type; }
-	 
+
 		public TypeContext() { }
 		public void copyFrom(TypeContext ctx) {
 			super.copyFrom(ctx);
@@ -8026,7 +8026,7 @@ import org.antlr.v4.runtime.tree.TerminalNode;
 						}
 						break;
 					}
-					} 
+					}
 				}
 				setState(1104);
 				_errHandler.sync(this);
@@ -8164,7 +8164,7 @@ import org.antlr.v4.runtime.tree.TerminalNode;
 					setState(1115);
 					match(IDENTIFIER);
 					}
-					} 
+					}
 				}
 				setState(1120);
 				_errHandler.sync(this);

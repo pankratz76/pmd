@@ -243,7 +243,7 @@ public class CyclomaticComplexityRule extends AbstractPLSQLRule {
             classEntry.highestDecisionPoints = methodDecisionPoints;
         }
     }
-    
+
     @Override
     public Object visit(ASTProgramUnit node, Object data) {
         entryStack.push(new Entry());

@@ -34,7 +34,7 @@ class PlsqlTreeDumpTest extends AbstractPLSQLParserTst {
     void parseMergeStatement() {
         doTest("MergeStatementIssue1934");
     }
-  
+
     @Test
     void errorLoggingClause() {
         doTest("ErrorLoggingClause2779");

@@ -62,7 +62,7 @@ public class RuleApplicator {
             if (!ruleSetApplies(rule, currentLangVer)) {
                 continue; // No point in even trying to apply the rule
             }
-            
+
             RuleContext ctx = InternalApiBridge.createRuleContext(listener, rule);
             rule.start(ctx);
             try (TimedOperation rcto = TimeTracker.startOperation(TimedOperationCategory.RULE, rule.getName())) {
@@ -83,7 +83,7 @@ public class RuleApplicator {
                         reportOrRethrow(listener, rule, node, AssertionUtil.contexted(e), SystemProps.isErrorRecoveryMode());
                     }
                 }
-                
+
                 rcto.close(nodeCounter);
             } finally {
                 rule.end(ctx);

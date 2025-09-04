@@ -83,7 +83,7 @@ public class CommentDefaultAccessModifierRule extends AbstractJavaRulechainRule 
         definePropertyDescriptor(REGEX_DESCRIPTOR);
         definePropertyDescriptor(TOP_LEVEL_TYPES);
     }
-    
+
     @Override
     public Object visit(final ASTMethodDeclaration decl, final Object data) {
         if (shouldReportNonTopLevel(decl)) {

@@ -548,7 +548,7 @@ public class CloseResourceRule extends AbstractJavaRule {
         }
         return false;
     }
-    
+
     private boolean isMethodCallOnVariable(ASTExpression expr, ASTVariableId variable) {
         if (expr instanceof ASTMethodCall) {
             ASTMethodCall methodCall = (ASTMethodCall) expr;
@@ -743,7 +743,7 @@ public class CloseResourceRule extends AbstractJavaRule {
 
                 if (variableClosed) {
                     variableClosed = false;
-                } 
+                }
                 if (!isInitialized) {
                     isInitialized = true;
                     initializingExpression = statement.getExpr();

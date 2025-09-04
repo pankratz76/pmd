@@ -80,7 +80,7 @@ public final class JavadocComment extends JavaComment {
     }
 
     /**
-     * Returns the owner of this comment. Null if this comment is 
+     * Returns the owner of this comment. Null if this comment is
      * misplaced.
      */
     public @Nullable JavadocCommentOwner getOwner() {

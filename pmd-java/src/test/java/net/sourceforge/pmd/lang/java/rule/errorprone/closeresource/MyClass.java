@@ -9,6 +9,6 @@ import java.sql.PreparedStatement;
 public class MyClass {
 
     public void cleanup() { }
-    
+
     public void applyTransactionTimeout(PreparedStatement stmt) { }
 }

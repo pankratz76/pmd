@@ -18,7 +18,7 @@ import net.sourceforge.pmd.lang.rule.RuleTargetSelector;
  * modifiers on Apex properties in Lightning component markup. The update
  * prevents access to private or protected Apex getters from Aura and Lightning
  * Web Components.
- * 
+ *
  * @author p.ozil
  */
 public class InaccessibleAuraEnabledGetterRule extends AbstractApexRule {

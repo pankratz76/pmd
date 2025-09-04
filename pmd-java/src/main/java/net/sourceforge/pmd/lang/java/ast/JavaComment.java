@@ -132,17 +132,17 @@ public class JavaComment implements Reportable {
 
     public static Stream<JavaComment> getLeadingComments(JavaNode node) {
         Stream<JavaccToken> specialTokens = getSpecialTokensIn(node);
-        
+
         if (node instanceof ModifierOwner && !(node instanceof ASTConstructorDeclaration)) {
             node = ((ModifierOwner) node).getModifiers();
             specialTokens = getSpecialTokensIn(node);
-            
+
             // if this was a non-implicit empty modifier node, we should also consider comments immediately after
             if (!node.getFirstToken().isImplicit()) {
                 specialTokens = Stream.concat(specialTokens, getSpecialTokensIn(node.getNextSibling()));
             }
         }
-        
+
         return specialTokens.filter(JavaComment::isComment)
                                          .map(JavaComment::toComment);
     }

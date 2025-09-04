@@ -32,7 +32,7 @@ class ASTNumericLiteralTest {
         long parsedLong = ASTNumericLiteral.parseIntegralValue(Chars.wrap("0b1000_0000_0000_0000_0000_0000_0000_0000_0000_0000_1000_1000_1000_0100_0001_0000L"));
         assertEquals(literalLong, parsedLong); // in decimal: -9223372036845829104L
     }
-    
+
     @Test
     void malformedLiteral() {
         assertEquals(0L, ASTNumericLiteral.parseIntegralValue(Chars.wrap("0x1g")));

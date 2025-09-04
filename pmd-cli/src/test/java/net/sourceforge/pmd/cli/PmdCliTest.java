@@ -249,7 +249,7 @@ class PmdCliTest extends BaseCliTest {
         CliExecutionResult result = runCli(USAGE_ERROR);
         result.checkStdErr(containsString("Missing required option: '--rulesets=<rulesets>'"));
     }
-    
+
     @Test
     void testMissingSource() throws Exception {
         CliExecutionResult result = runCli(USAGE_ERROR, "--rulesets", RULESET_NO_VIOLATIONS);
@@ -609,7 +609,7 @@ class PmdCliTest extends BaseCliTest {
         ByteBuffer buf = ByteBuffer.wrap(bytes);
         return StandardCharsets.UTF_8.decode(buf).toString();
     }
-    
+
     @Override
     protected List<String> cliStandardArgs() {
         return listOf(

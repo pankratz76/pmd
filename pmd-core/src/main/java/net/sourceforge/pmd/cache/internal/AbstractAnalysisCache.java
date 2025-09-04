@@ -72,19 +72,19 @@ abstract class AbstractAnalysisCache implements AnalysisCache {
 
             if (upToDate) {
                 LOG.trace("Incremental Analysis cache HIT");
-                
+
                 // copy results over
                 updatedResult = cachedResult;
             } else {
                 LOG.trace("Incremental Analysis cache MISS - {}",
                           cachedResult != null ? "file changed" : "no previous result found");
-                
+
                 // New file being analyzed, create new empty entry
                 updatedResult = new AnalysisResult(document.getCheckSum(), new ArrayList<>());
             }
 
             updatedResultsCache.put(document.getFileId(), updatedResult);
-            
+
             return upToDate;
         }
     }

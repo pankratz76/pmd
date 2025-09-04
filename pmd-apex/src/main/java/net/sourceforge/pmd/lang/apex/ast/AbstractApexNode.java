@@ -178,7 +178,7 @@ abstract class AbstractApexNode extends AbstractNode<AbstractApexNode, ApexNode<
     protected void setRegion(TextRegion region) {
         this.region = region;
     }
-    
+
     @Override
     public abstract boolean hasRealLoc();
 

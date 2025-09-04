@@ -56,10 +56,10 @@ public class PmdCommand extends AbstractAnalysisPmdSubcommand<PMDConfiguration> 
         final Properties emptyProps = new Properties();
         final StringBuilder reportPropertiesHelp = new StringBuilder();
         final String lineSeparator = System.lineSeparator();
-        
+
         for (final String rendererName : RendererFactory.supportedRenderers()) {
             final Renderer renderer = RendererFactory.createRenderer(rendererName, emptyProps);
-            
+
             if (!renderer.getPropertyDescriptors().isEmpty()) {
                 reportPropertiesHelp.append(rendererName + ":" + lineSeparator);
                 for (final PropertyDescriptor<?> property : renderer.getPropertyDescriptors()) {
@@ -73,13 +73,13 @@ public class PmdCommand extends AbstractAnalysisPmdSubcommand<PMDConfiguration> 
                 }
             }
         }
-        
+
         // System Properties are the easier way to inject dynamically computed values into the help of an option
         System.setProperty("pmd-cli.pmd.report.properties.help", reportPropertiesHelp.toString());
     }
 
     private List<String> rulesets;
-    
+
 
     private String format;
 
@@ -224,7 +224,7 @@ public class PmdCommand extends AbstractAnalysisPmdSubcommand<PMDConfiguration> 
         if (threads < 0) {
             throw new ParameterException(spec.commandLine(), "Thread count should be a positive number or zero, found " + threads + " instead.");
         }
-        
+
         this.threads = threads;
     }
 
@@ -265,7 +265,7 @@ public class PmdCommand extends AbstractAnalysisPmdSubcommand<PMDConfiguration> 
         if (languageVersion != null) {
             configuration.setDefaultLanguageVersions(languageVersion);
         }
-        
+
         // Important: do this after setting default versions, so we can pick them up
         if (forceLanguage != null) {
             final LanguageVersion forcedLangVer = configuration.getLanguageVersionDiscoverer()
@@ -379,7 +379,7 @@ public class PmdCommand extends AbstractAnalysisPmdSubcommand<PMDConfiguration> 
 
     /**
      * Provider of candidates for valid report properties.
-     * 
+     *
      * Check the help for which ones are supported by each report format and possible values.
      */
     private static final class PmdReportPropertiesCandidates implements Iterable<String> {
@@ -390,7 +390,7 @@ public class PmdCommand extends AbstractAnalysisPmdSubcommand<PMDConfiguration> 
             final Properties emptyProps = new Properties();
             for (final String rendererName : RendererFactory.supportedRenderers()) {
                 final Renderer renderer = RendererFactory.createRenderer(rendererName, emptyProps);
-                
+
                 for (final PropertyDescriptor<?> property : renderer.getPropertyDescriptors()) {
                     propertyNames.add(property.name());
                 }

@@ -51,10 +51,10 @@ public class PMDExecutor {
         pb.command().addAll(arguments);
 
         pb.redirectErrorStream(false);
-        
+
         // Ensure no ANSI output so tests can properly look at it
         pb.environment().put("PMD_JAVA_OPTS", "-Dpicocli.ansi=false");
-        
+
         final Process process = pb.start();
         final ExecutionResult.Builder result = new ExecutionResult.Builder();
 

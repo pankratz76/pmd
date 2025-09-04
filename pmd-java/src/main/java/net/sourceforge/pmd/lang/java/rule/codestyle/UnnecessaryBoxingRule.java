@@ -158,9 +158,9 @@ public class UnnecessaryBoxingRule extends AbstractJavaRulechainRule {
             reason = "boxing of boxed value";
         } else if (isImplicitlyTypedLambdaReturnExpr(conversionExpr)
             || ctxType != null && conversionIsImplicitlyRealisable(sourceType, ctxType, ctx, conversionOutput)) {
-            
+
             // Check if this unboxing is required for correct overload selection
-            if (sourceType.isBoxedPrimitive() && conversionOutput.isPrimitive() 
+            if (sourceType.isBoxedPrimitive() && conversionOutput.isPrimitive()
                 && isUnboxingRequiredForOverloadSelection(conversionExpr, convertedExpr)) {
                 return;
             }
@@ -199,7 +199,7 @@ public class UnnecessaryBoxingRule extends AbstractJavaRulechainRule {
         JavaNode parent = conversionExpr.getParent();
         InvocationNode invocation;
         int argIndex;
-        
+
         if (parent instanceof ASTList && parent.getParent() instanceof InvocationNode) {
             invocation = (InvocationNode) parent.getParent();
             argIndex = conversionExpr.getIndexInParent();
@@ -209,7 +209,7 @@ public class UnnecessaryBoxingRule extends AbstractJavaRulechainRule {
         } else {
             return false;
         }
-        
+
         // Get the method and validate we have a boxed->primitive conversion
         JMethodSig currentMethod;
         try {
@@ -217,15 +217,15 @@ public class UnnecessaryBoxingRule extends AbstractJavaRulechainRule {
         } catch (Exception e) {
             return false;
         }
-        
+
         if (!convertedExpr.getTypeMirror().isBoxedPrimitive() || !conversionExpr.getTypeMirror().isPrimitive()) {
             return false;
         }
-        
+
         // Check if there are overloads that would accept the boxed type differently
         return hasObjectOverloadAtPosition(currentMethod, argIndex, invocation instanceof ASTConstructorCall);
     }
-    
+
     /**
      * Check if there are other overloads that would accept the boxed type differently,
      * making the unboxing necessary for correct overload selection.
@@ -235,28 +235,28 @@ public class UnnecessaryBoxingRule extends AbstractJavaRulechainRule {
         if (!(declaringType instanceof JClassType) || argIndex >= currentMethod.getFormalParameters().size()) {
             return false;
         }
-        
+
         JClassType classType = (JClassType) declaringType;
         JTypeMirror currentParamType = currentMethod.getFormalParameters().get(argIndex);
         if (!currentParamType.isPrimitive()) {
             return false;
         }
-        
+
         JTypeMirror boxedType = currentParamType.box();
-        
+
         // Get all overloads and check if any would accept the boxed type differently
-        java.util.List<JMethodSig> overloads = isConstructor 
+        java.util.List<JMethodSig> overloads = isConstructor
             ? classType.getConstructors()
             : classType.streamMethods(method -> method.nameEquals(currentMethod.getName()))
                       .collect(OverloadSet.collectMostSpecific(classType));
-        
+
         return overloads.stream()
             .filter(overload -> !overload.equals(currentMethod))
             .filter(overload -> argIndex < overload.getFormalParameters().size())
             .map(overload -> overload.getFormalParameters().get(argIndex))
-            .anyMatch(overloadParamType -> 
+            .anyMatch(overloadParamType ->
                 // Boxed type is assignable to overload parameter (Object, generic, etc.)
-                boxedType.isSubtypeOf(overloadParamType) 
+                boxedType.isSubtypeOf(overloadParamType)
                 // Or overload takes reference type while current takes primitive (different conversion paths)
                 || overloadParamType.isTypeVariable() || !overloadParamType.isPrimitive() && currentParamType.isPrimitive()
             );

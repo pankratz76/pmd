@@ -41,23 +41,23 @@ import org.antlr.v4.runtime.tree.TerminalNode;
 	protected static final PredictionContextCache _sharedContextCache =
 		new PredictionContextCache();
 	public static final int
-		BOMUTF8=1, BOMUTF16=2, WHITESPACE=3, COMMENT=4, STARTCOMMENT=5, DOCSTRING1=6, 
-		DOCSTRING2=7, BACKGROUND=8, EXAMPLES=9, FEATURE=10, RULEX=11, SCENARIO=12, 
-		SCENARIOOUTLINE=13, AND=14, ANYSTEP=15, BUT=16, DATATABLE=17, GIVEN=18, 
+		BOMUTF8=1, BOMUTF16=2, WHITESPACE=3, COMMENT=4, STARTCOMMENT=5, DOCSTRING1=6,
+		DOCSTRING2=7, BACKGROUND=8, EXAMPLES=9, FEATURE=10, RULEX=11, SCENARIO=12,
+		SCENARIOOUTLINE=13, AND=14, ANYSTEP=15, BUT=16, DATATABLE=17, GIVEN=18,
 		THEN=19, WHEN=20, TAG=21, PARAMETER=22, NL=23, TOKEN=24;
 	public static final int
-		RULE_main = 0, RULE_feature = 1, RULE_instructionLine = 2, RULE_instruction = 3, 
-		RULE_stepInstruction = 4, RULE_background = 5, RULE_rulex = 6, RULE_scenario = 7, 
-		RULE_scenarioOutline = 8, RULE_step = 9, RULE_stepItem = 10, RULE_tagline = 11, 
-		RULE_and = 12, RULE_anystep = 13, RULE_but = 14, RULE_datatable = 15, 
-		RULE_given = 16, RULE_then = 17, RULE_when = 18, RULE_examples = 19, RULE_instructionDescription = 20, 
+		RULE_main = 0, RULE_feature = 1, RULE_instructionLine = 2, RULE_instruction = 3,
+		RULE_stepInstruction = 4, RULE_background = 5, RULE_rulex = 6, RULE_scenario = 7,
+		RULE_scenarioOutline = 8, RULE_step = 9, RULE_stepItem = 10, RULE_tagline = 11,
+		RULE_and = 12, RULE_anystep = 13, RULE_but = 14, RULE_datatable = 15,
+		RULE_given = 16, RULE_then = 17, RULE_when = 18, RULE_examples = 19, RULE_instructionDescription = 20,
 		RULE_stepDescription = 21, RULE_description = 22, RULE_text = 23;
 	private static String[] makeRuleNames() {
 		return new String[] {
-			"main", "feature", "instructionLine", "instruction", "stepInstruction", 
-			"background", "rulex", "scenario", "scenarioOutline", "step", "stepItem", 
-			"tagline", "and", "anystep", "but", "datatable", "given", "then", "when", 
-			"examples", "instructionDescription", "stepDescription", "description", 
+			"main", "feature", "instructionLine", "instruction", "stepInstruction",
+			"background", "rulex", "scenario", "scenarioOutline", "step", "stepItem",
+			"tagline", "and", "anystep", "but", "datatable", "given", "then", "when",
+			"examples", "instructionDescription", "stepDescription", "description",
 			"text"
 		};
 	}
@@ -65,17 +65,17 @@ import org.antlr.v4.runtime.tree.TerminalNode;
 
 	private static String[] makeLiteralNames() {
 		return new String[] {
-			null, "'\u00EF\u00BB\u00BF'", "'\uFEFF'", null, null, null, null, null, 
-			"'Background:'", null, "'Feature:'", "'Rule:'", null, null, "'And'", 
+			null, "'\u00EF\u00BB\u00BF'", "'\uFEFF'", null, null, null, null, null,
+			"'Background:'", null, "'Feature:'", "'Rule:'", null, null, "'And'",
 			"'*'", "'But'", null, "'Given'", "'Then'", "'When'"
 		};
 	}
 	private static final String[] _LITERAL_NAMES = makeLiteralNames();
 	private static String[] makeSymbolicNames() {
 		return new String[] {
-			null, "BOMUTF8", "BOMUTF16", "WHITESPACE", "COMMENT", "STARTCOMMENT", 
-			"DOCSTRING1", "DOCSTRING2", "BACKGROUND", "EXAMPLES", "FEATURE", "RULEX", 
-			"SCENARIO", "SCENARIOOUTLINE", "AND", "ANYSTEP", "BUT", "DATATABLE", 
+			null, "BOMUTF8", "BOMUTF16", "WHITESPACE", "COMMENT", "STARTCOMMENT",
+			"DOCSTRING1", "DOCSTRING2", "BACKGROUND", "EXAMPLES", "FEATURE", "RULEX",
+			"SCENARIO", "SCENARIOOUTLINE", "AND", "ANYSTEP", "BUT", "DATATABLE",
 			"GIVEN", "THEN", "WHEN", "TAG", "PARAMETER", "NL", "TOKEN"
 		};
 	}
@@ -216,7 +216,7 @@ import org.antlr.v4.runtime.tree.TerminalNode;
 					setState(58);
 					instructionLine();
 					}
-					} 
+					}
 				}
 				setState(63);
 				_errHandler.sync(this);
@@ -315,7 +315,7 @@ import org.antlr.v4.runtime.tree.TerminalNode;
 					setState(78);
 					tagline();
 					}
-					} 
+					}
 				}
 				setState(83);
 				_errHandler.sync(this);
@@ -331,7 +331,7 @@ import org.antlr.v4.runtime.tree.TerminalNode;
 					setState(84);
 					match(NL);
 					}
-					} 
+					}
 				}
 				setState(89);
 				_errHandler.sync(this);
@@ -398,7 +398,7 @@ import org.antlr.v4.runtime.tree.TerminalNode;
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(94); 
+			setState(94);
 			_errHandler.sync(this);
 			_la = _input.LA(1);
 			do {
@@ -408,7 +408,7 @@ import org.antlr.v4.runtime.tree.TerminalNode;
 				match(NL);
 				}
 				}
-				setState(96); 
+				setState(96);
 				_errHandler.sync(this);
 				_la = _input.LA(1);
 			} while ( _la==NL );
@@ -566,7 +566,7 @@ import org.antlr.v4.runtime.tree.TerminalNode;
 					if ( _alt==1 ) {
 						{
 						{
-						setState(117); 
+						setState(117);
 						_errHandler.sync(this);
 						_la = _input.LA(1);
 						do {
@@ -576,7 +576,7 @@ import org.antlr.v4.runtime.tree.TerminalNode;
 							match(NL);
 							}
 							}
-							setState(119); 
+							setState(119);
 							_errHandler.sync(this);
 							_la = _input.LA(1);
 						} while ( _la==NL );
@@ -597,7 +597,7 @@ import org.antlr.v4.runtime.tree.TerminalNode;
 							_la = _input.LA(1);
 						}
 						}
-						} 
+						}
 					}
 					setState(132);
 					_errHandler.sync(this);
@@ -610,7 +610,7 @@ import org.antlr.v4.runtime.tree.TerminalNode;
 					if ( _alt==1 ) {
 						{
 						{
-						setState(134); 
+						setState(134);
 						_errHandler.sync(this);
 						_alt = 1;
 						do {
@@ -626,14 +626,14 @@ import org.antlr.v4.runtime.tree.TerminalNode;
 							default:
 								throw new NoViableAltException(this);
 							}
-							setState(136); 
+							setState(136);
 							_errHandler.sync(this);
 							_alt = getInterpreter().adaptivePredict(_input,15,_ctx);
 						} while ( _alt!=2 && _alt!=org.antlr.v4.runtime.atn.ATN.INVALID_ALT_NUMBER );
 						setState(138);
 						step();
 						}
-						} 
+						}
 					}
 					setState(143);
 					_errHandler.sync(this);
@@ -1135,7 +1135,7 @@ import org.antlr.v4.runtime.tree.TerminalNode;
 						setState(187);
 						tagline();
 						}
-						} 
+						}
 					}
 					setState(192);
 					_errHandler.sync(this);
@@ -1206,7 +1206,7 @@ import org.antlr.v4.runtime.tree.TerminalNode;
 			int _alt;
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(203); 
+			setState(203);
 			_errHandler.sync(this);
 			_alt = 1;
 			do {
@@ -1222,7 +1222,7 @@ import org.antlr.v4.runtime.tree.TerminalNode;
 				default:
 					throw new NoViableAltException(this);
 				}
-				setState(205); 
+				setState(205);
 				_errHandler.sync(this);
 				_alt = getInterpreter().adaptivePredict(_input,25,_ctx);
 			} while ( _alt!=2 && _alt!=org.antlr.v4.runtime.atn.ATN.INVALID_ALT_NUMBER );
@@ -1400,7 +1400,7 @@ import org.antlr.v4.runtime.tree.TerminalNode;
 			int _alt;
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(214); 
+			setState(214);
 			_errHandler.sync(this);
 			_alt = 1;
 			do {
@@ -1416,7 +1416,7 @@ import org.antlr.v4.runtime.tree.TerminalNode;
 				default:
 					throw new NoViableAltException(this);
 				}
-				setState(216); 
+				setState(216);
 				_errHandler.sync(this);
 				_alt = getInterpreter().adaptivePredict(_input,26,_ctx);
 			} while ( _alt!=2 && _alt!=org.antlr.v4.runtime.atn.ATN.INVALID_ALT_NUMBER );
@@ -1964,7 +1964,7 @@ import org.antlr.v4.runtime.tree.TerminalNode;
 			int _alt;
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(257); 
+			setState(257);
 			_errHandler.sync(this);
 			_alt = 1;
 			do {
@@ -1980,7 +1980,7 @@ import org.antlr.v4.runtime.tree.TerminalNode;
 				default:
 					throw new NoViableAltException(this);
 				}
-				setState(259); 
+				setState(259);
 				_errHandler.sync(this);
 				_alt = getInterpreter().adaptivePredict(_input,30,_ctx);
 			} while ( _alt!=2 && _alt!=org.antlr.v4.runtime.atn.ATN.INVALID_ALT_NUMBER );

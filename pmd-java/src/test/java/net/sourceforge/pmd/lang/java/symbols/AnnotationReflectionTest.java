@@ -51,7 +51,7 @@ class AnnotationReflectionTest {
     void testReflectionOfClassMethods(SymImplementation impl) {
         Class<SomeClass> actualClass = SomeClass.class;
         JClassSymbol sym = impl.getSymbol(actualClass);
-    
+
         impl.assertAllMethodsMatch(actualClass, sym);
         impl.assertAllFieldsMatch(actualClass, sym);
     }
@@ -61,7 +61,7 @@ class AnnotationReflectionTest {
     void testReflectionOfAnnotDefaults(SymImplementation impl) {
         Class<AnnotWithDefaults> actualClass = AnnotWithDefaults.class;
         JClassSymbol sym = impl.getSymbol(actualClass);
-        
+
         impl.assertAllMethodsMatch(actualClass, sym);
     }
 
@@ -129,7 +129,7 @@ class AnnotationReflectionTest {
         JFieldSymbol f1 = sym.getDeclaredField("f1");
         assertHasAnnotations(setOf(createAnnotationInstance(FieldAnnotation.class)), f1);
     }
-    
+
     @ParameterizedTest
     @EnumSource
     void testAnnotOnMethod(SymImplementation impl) {
@@ -141,7 +141,7 @@ class AnnotationReflectionTest {
         assertHasAnnotations(emptySet(), method.getFormalParameters().get(0));
         assertHasAnnotations(setOf(createAnnotationInstance(MethodAnnotation.class)), method);
     }
-    
+
     @ParameterizedTest
     @EnumSource
     void testAnnotOnConstructor(SymImplementation impl) {

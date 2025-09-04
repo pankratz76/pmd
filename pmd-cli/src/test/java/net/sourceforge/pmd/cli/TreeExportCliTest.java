@@ -62,12 +62,12 @@ class TreeExportCliTest extends BaseCliTest {
     @Override
     protected List<String> cliStandardArgs() {
         final List<String> argList = new ArrayList<>();
-        
+
         // Set program name and set dummy language
         argList.add("ast-dump");
         argList.add("-l");
         argList.add("dummy");
-        
+
         return argList;
     }
 }

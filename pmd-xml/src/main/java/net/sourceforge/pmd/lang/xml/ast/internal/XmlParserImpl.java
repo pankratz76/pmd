@@ -111,15 +111,15 @@ public final class XmlParserImpl {
         public Document getNode() {
             return (Document) super.getNode();
         }
-        
+
         public String getXmlEncoding() {
             return getNode().getXmlEncoding();
         }
-        
+
         public boolean isXmlStandalone() {
             return getNode().getXmlStandalone();
         }
-        
+
         public String getXmlVersion() {
             return getNode().getXmlVersion();
         }

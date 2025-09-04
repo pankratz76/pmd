@@ -123,7 +123,7 @@ final class AstClassSym
                 }
             }
         }
-        
+
 
         if (!recordComponents.isEmpty()) {
             // then the recordsComponents contains all record components

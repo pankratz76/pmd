@@ -70,7 +70,7 @@ class LatticeRelation<K, @NonNull V, C> {
      *                         through {@link #get(Object)}
      * @param keyToString      Strategy to render keys when dumping the lattice to a graph
      * @param collector        Collector used to accumulate values
-     *                         
+     *
      * @param <A>              Internal accumulator type of the collector
      */
     <A> LatticeRelation(TopoOrder<K> keyOrder,

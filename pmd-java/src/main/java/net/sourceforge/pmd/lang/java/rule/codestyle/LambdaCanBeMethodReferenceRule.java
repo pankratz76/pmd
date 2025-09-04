@@ -179,7 +179,7 @@ public class LambdaCanBeMethodReferenceRule extends AbstractJavaRulechainRule {
         boolean isIgnoredBecauseOfMethodCall =
             qualifier instanceof ASTMethodCall && getProperty(IGNORE_IF_RECEIVER_IS_METHOD);
 
-        // if call uses first lambda parm as receiver, then the mref may not npe at creation time 
+        // if call uses first lambda parm as receiver, then the mref may not npe at creation time
         boolean mayNPE = lambda.getParameters().size() == call.getArguments().size();
         boolean isIgnoredBecauseOfNPE = mayNPE && getProperty(IGNORE_IF_MAY_NPE);
         return !isIgnoredBecauseOfNPE && !isIgnoredBecauseOfMethodCall;

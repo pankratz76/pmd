@@ -18,9 +18,9 @@ import picocli.CommandLine.ParseResult;
 abstract class BaseCommandTest<T> {
 
     protected abstract T createCommand();
-    
+
     protected abstract void addStandardParams(List<String> argList);
-    
+
     protected void assertError(final String... params) {
         final T cmd = createCommand();
         final ParseResult parseResult = parseCommand(cmd, params);
@@ -35,7 +35,7 @@ abstract class BaseCommandTest<T> {
 
         return cmd;
     }
-    
+
     private ParseResult parseCommand(final Object cmd, final String... params) {
         final List<String> argList = new ArrayList<>();
         argList.addAll(Arrays.asList(params));
@@ -44,10 +44,10 @@ abstract class BaseCommandTest<T> {
 
         final CommandLine commandLine = new CommandLine(cmd)
             .setCaseInsensitiveEnumValuesAllowed(true);
-        
+
         // Collect errors instead of simply throwing during parsing
         commandLine.getCommandSpec().parser().collectErrors(true);
-        
+
         return commandLine.parseArgs(argList.toArray(new String[0]));
     }
 

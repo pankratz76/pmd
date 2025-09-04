@@ -31,7 +31,7 @@ public class UnicodeClasses extends Lexer {
 	protected static final PredictionContextCache _sharedContextCache =
 		new PredictionContextCache();
 	public static final int
-		UNICODE_CLASS_LL=1, UNICODE_CLASS_LM=2, UNICODE_CLASS_LO=3, UNICODE_CLASS_LT=4, 
+		UNICODE_CLASS_LL=1, UNICODE_CLASS_LM=2, UNICODE_CLASS_LO=3, UNICODE_CLASS_LT=4,
 		UNICODE_CLASS_LU=5, UNICODE_CLASS_ND=6, UNICODE_CLASS_NL=7;
 	public static String[] channelNames = {
 		"DEFAULT_TOKEN_CHANNEL", "HIDDEN"
@@ -43,7 +43,7 @@ public class UnicodeClasses extends Lexer {
 
 	private static String[] makeRuleNames() {
 		return new String[] {
-			"UNICODE_CLASS_LL", "UNICODE_CLASS_LM", "UNICODE_CLASS_LO", "UNICODE_CLASS_LT", 
+			"UNICODE_CLASS_LL", "UNICODE_CLASS_LM", "UNICODE_CLASS_LO", "UNICODE_CLASS_LT",
 			"UNICODE_CLASS_LU", "UNICODE_CLASS_ND", "UNICODE_CLASS_NL"
 		};
 	}
@@ -56,7 +56,7 @@ public class UnicodeClasses extends Lexer {
 	private static final String[] _LITERAL_NAMES = makeLiteralNames();
 	private static String[] makeSymbolicNames() {
 		return new String[] {
-			null, "UNICODE_CLASS_LL", "UNICODE_CLASS_LM", "UNICODE_CLASS_LO", "UNICODE_CLASS_LT", 
+			null, "UNICODE_CLASS_LL", "UNICODE_CLASS_LM", "UNICODE_CLASS_LO", "UNICODE_CLASS_LT",
 			"UNICODE_CLASS_LU", "UNICODE_CLASS_ND", "UNICODE_CLASS_NL"
 		};
 	}

@@ -38,7 +38,7 @@ public class TreeExportCommand extends AbstractPmdSubcommand {
     static {
         final StringBuilder reportPropertiesHelp = new StringBuilder();
         final String lineSeparator = System.lineSeparator();
-        
+
         for (final TreeRendererDescriptor renderer : TreeRenderers.registeredRenderers()) {
             final PropertySource propertyBundle = renderer.newPropertyBundle();
             if (!propertyBundle.getPropertyDescriptors().isEmpty()) {
@@ -54,14 +54,14 @@ public class TreeExportCommand extends AbstractPmdSubcommand {
                 }
             }
         }
-        
+
         // System Properties are the easier way to inject dynamically computed values into the help of an option
         System.setProperty("pmd-cli.tree-export.report.properties.help", reportPropertiesHelp.toString());
     }
-    
+
     @Mixin
     private EncodingMixin encoding;
-    
+
     @Option(names = { "--format", "-f" }, defaultValue = "xml",
             description = "The output format.%nValid values: ${COMPLETION-CANDIDATES}",
             completionCandidates = TreeRenderersCandidates.class)
@@ -91,19 +91,19 @@ public class TreeExportCommand extends AbstractPmdSubcommand {
         configuration.setProperties(properties);
         configuration.setReadStdin(readStdin);
         configuration.setSourceEncoding(encoding.getEncoding());
-        
+
         return configuration;
     }
-    
+
     @Override
     protected void validate() throws ParameterException {
         super.validate();
-        
+
         if (file == null && !readStdin) {
             throw new ParameterException(spec.commandLine(), "One of --file or --read-stdin must be used.");
         }
     }
-    
+
     @Override
     protected CliExitCode execute() {
         final TreeExporter exporter = new TreeExporter(toConfiguration());
@@ -113,7 +113,7 @@ public class TreeExportCommand extends AbstractPmdSubcommand {
         } catch (final IOException e) {
             final SimpleMessageReporter reporter = new SimpleMessageReporter(LoggerFactory.getLogger(TreeExportCommand.class));
             reporter.error(e, LogMessages.errorDetectedMessage(1, "ast-dump"));
-            
+
             return CliExitCode.ERROR;
         }
     }
@@ -128,10 +128,10 @@ public class TreeExportCommand extends AbstractPmdSubcommand {
             return TreeRenderers.registeredRenderers().stream().map(TreeRendererDescriptor::id).iterator();
         }
     }
-    
+
     /**
      * Provider of candidates for valid report properties.
-     * 
+     *
      * Check the help for which ones are supported by each report format and possible values.
      */
     private static final class TreeExportReportPropertiesCandidates implements Iterable<String> {
@@ -141,7 +141,7 @@ public class TreeExportCommand extends AbstractPmdSubcommand {
             final List<String> propertyNames = new ArrayList<>();
             for (final TreeRendererDescriptor renderer : TreeRenderers.registeredRenderers()) {
                 final PropertySource propertyBundle = renderer.newPropertyBundle();
-                
+
                 for (final PropertyDescriptor<?> property : propertyBundle.getPropertyDescriptors()) {
                     propertyNames.add(property.name());
                 }

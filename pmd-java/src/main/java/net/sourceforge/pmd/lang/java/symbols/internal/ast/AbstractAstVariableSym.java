@@ -18,7 +18,7 @@ import net.sourceforge.pmd.lang.java.types.Substitution;
 abstract class AbstractAstVariableSym
     extends AbstractAstAnnotableSym<ASTVariableId>
     implements JVariableSymbol {
-    
+
     AbstractAstVariableSym(ASTVariableId node, AstSymFactory factory) {
         super(node, factory);
     }

@@ -20,14 +20,14 @@ class AnalysisCacheIT extends AbstractBinaryDistributionTest {
     @Test
     void testPmdCachedResultMatches() throws Exception {
         final Path cacheFile = createTemporaryReportFile();
-        
+
         ExecutionResult result = PMDExecutor.runPMD(createTemporaryReportFile(), tempDir, "-d", srcDir, "-R", "src/test/resources/rulesets/sample-ruleset.xml",
                 "-f", "text", "--cache", cacheFile.toAbsolutePath().toString(), "--no-progress");
-        
+
         // Ensure we have violations and a non-empty cache file
         assertTrue(cacheFile.toFile().length() > 0, "cache file is empty after run");
         result.assertExitCode(4).assertReport(containsString(srcDir + File.separator + "JumbledIncrementer.java:8:\tJumbledIncrementer:\t"));
-        
+
         // rerun from cache
         ExecutionResult resultFromCache = PMDExecutor.runPMD(createTemporaryReportFile(), tempDir, "-d", srcDir, "-R", "src/test/resources/rulesets/sample-ruleset.xml",
                 "-f", "text", "--cache", cacheFile.toAbsolutePath().toString(), "--no-progress", "-v");
@@ -36,23 +36,23 @@ class AnalysisCacheIT extends AbstractBinaryDistributionTest {
         result.assertIdenticalResults(resultFromCache);
         resultFromCache.assertErrorOutputContains("Incremental Analysis cache HIT");
     }
-    
+
     @Test
     void testPmdCachedResultsAreRelativized() throws Exception {
         final Path cacheFile = createTemporaryReportFile();
-        
+
         ExecutionResult result = PMDExecutor.runPMD(createTemporaryReportFile(), tempDir, "-d", srcDir, "-R", "src/test/resources/rulesets/sample-ruleset.xml",
                 "-f", "text", "--cache", cacheFile.toAbsolutePath().toString(), "--no-progress");
-        
+
         // Ensure we have violations and a non-empty cache file
         assertTrue(cacheFile.toFile().length() > 0, "cache file is empty after run");
         result.assertExitCode(4)
               .assertReport(containsString(srcDir + File.separator + "JumbledIncrementer.java:8:\tJumbledIncrementer:\t"));
-        
+
         // rerun from cache with relativized paths
         ExecutionResult resultFromCache = PMDExecutor.runPMD(createTemporaryReportFile(), tempDir, "-d", Paths.get(".").toAbsolutePath().relativize(Paths.get(srcDir)).toString(), "-R", "src/test/resources/rulesets/sample-ruleset.xml",
                 "-f", "text", "--cache", cacheFile.toAbsolutePath().toString(), "--no-progress", "-v");
-        
+
         resultFromCache.assertErrorOutputContains("Incremental Analysis cache HIT");
 
         // An error with the relative path should exist, but no with the absolute one

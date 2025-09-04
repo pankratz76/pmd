@@ -291,7 +291,7 @@ public class ScopeAndDeclarationFinder extends PlsqlVisitorBase<Object, Object> 
         cont(node);
         return data;
     }
-    
+
     @Override
     public Object visit(ASTTypeMethod node, Object data) {
         return visitMethodLike(node, data);

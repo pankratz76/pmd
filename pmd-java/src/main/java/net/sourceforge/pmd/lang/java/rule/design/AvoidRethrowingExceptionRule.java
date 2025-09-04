@@ -24,10 +24,10 @@ public class AvoidRethrowingExceptionRule extends AbstractJavaRulechainRule {
     @Override
     public Object visit(ASTTryStatement tryStmt, Object data) {
         List<ASTCatchClause> catchClauses = tryStmt.getCatchClauses().toList();
-        
+
         for (int i = 0; i < catchClauses.size(); i++) {
             ASTCatchClause currentCatch = catchClauses.get(i);
-            
+
             if (!JavaAstUtils.isJustRethrowException(currentCatch)) {
                 continue;
             }

@@ -136,7 +136,7 @@ public class VfHtmlStyleTagXssRule extends AbstractVfRule {
     /**
      * Get text content within style tag that leads up to the ElExpression.
      * For example, in this snippet:
-     * 
+     *
      * <pre>
      * &lt;style>
      *  div {

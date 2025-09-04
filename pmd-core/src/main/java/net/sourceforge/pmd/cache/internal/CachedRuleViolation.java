@@ -49,7 +49,7 @@ final class CachedRuleViolation implements RuleViolation {
         this.ruleTargetLanguage = ruleTargetLanguage;
         this.additionalInfo = additionalInfo;
     }
-    
+
     @Override
     public Rule getRule() {
         // The mapper may be initialized after cache is loaded, so use it lazily

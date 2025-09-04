@@ -39,31 +39,31 @@ import org.antlr.v4.runtime.tree.TerminalNode;
 	protected static final PredictionContextCache _sharedContextCache =
 		new PredictionContextCache();
 	public static final int
-		T__0=1, T__1=2, T__2=3, T__3=4, T__4=5, T__5=6, T__6=7, T__7=8, T__8=9, 
-		T__9=10, T__10=11, T__11=12, T__12=13, T__13=14, T__14=15, T__15=16, T__16=17, 
-		COMMENTS=18, MULTILINECOMMENTS1=19, MULTILINECOMMENTS2=20, MULTILINESTRING=21, 
-		NL=22, WHITESPACE=23, ABSTRACT=24, ARROWOPERATOR=25, ASSIGNMENTOPERATOR=26, 
-		BAREMODULE=27, BEGIN=28, BITSHIFTOPERATOR=29, BITSTYPE=30, BREAK=31, CATCH=32, 
-		CCALL=33, CHAR=34, CONST=35, CONTINUE=36, DO=37, ELSE=38, ELSIF=39, END=40, 
-		EXPORT=41, EXTERNALCOMMAND=42, FINALLY=43, FOR=44, FUNCTION=45, GLOBAL=46, 
-		IF=47, IMMUTABLE=48, IMPORT=49, IMPORTALL=50, INSTANCEOF=51, LET=52, LOCAL=53, 
-		MACRO=54, MODULE=55, PIPEOPERATOR=56, QUOTE=57, RETURN=58, STAGEDFUNCTION=59, 
-		STRING=60, STRUCT=61, TRY=62, TYPE=63, TYPEALIAS=64, USING=65, WHERE=66, 
-		WHILE=67, NUMERICAL=68, INT_LITERAL=69, BINARY=70, OCTAL=71, HEX=72, FLOAT32_LITERAL=73, 
+		T__0=1, T__1=2, T__2=3, T__3=4, T__4=5, T__5=6, T__6=7, T__7=8, T__8=9,
+		T__9=10, T__10=11, T__11=12, T__12=13, T__13=14, T__14=15, T__15=16, T__16=17,
+		COMMENTS=18, MULTILINECOMMENTS1=19, MULTILINECOMMENTS2=20, MULTILINESTRING=21,
+		NL=22, WHITESPACE=23, ABSTRACT=24, ARROWOPERATOR=25, ASSIGNMENTOPERATOR=26,
+		BAREMODULE=27, BEGIN=28, BITSHIFTOPERATOR=29, BITSTYPE=30, BREAK=31, CATCH=32,
+		CCALL=33, CHAR=34, CONST=35, CONTINUE=36, DO=37, ELSE=38, ELSIF=39, END=40,
+		EXPORT=41, EXTERNALCOMMAND=42, FINALLY=43, FOR=44, FUNCTION=45, GLOBAL=46,
+		IF=47, IMMUTABLE=48, IMPORT=49, IMPORTALL=50, INSTANCEOF=51, LET=52, LOCAL=53,
+		MACRO=54, MODULE=55, PIPEOPERATOR=56, QUOTE=57, RETURN=58, STAGEDFUNCTION=59,
+		STRING=60, STRUCT=61, TRY=62, TYPE=63, TYPEALIAS=64, USING=65, WHERE=66,
+		WHILE=67, NUMERICAL=68, INT_LITERAL=69, BINARY=70, OCTAL=71, HEX=72, FLOAT32_LITERAL=73,
 		FLOAT64_LITERAL=74, HEX_FLOAT=75, IDENTIFIER=76, ANY=77, STAGED_FUNCTION=78;
 	public static final int
-		RULE_main = 0, RULE_functionDefinition = 1, RULE_functionDefinition1 = 2, 
-		RULE_functionDefinition2 = 3, RULE_functionIdentifier = 4, RULE_whereClause = 5, 
-		RULE_functionBody = 6, RULE_statement = 7, RULE_beginStatement = 8, RULE_doStatement = 9, 
-		RULE_forStatement = 10, RULE_ifStatement = 11, RULE_letStatement = 12, 
-		RULE_macroStatement = 13, RULE_structStatement = 14, RULE_tryCatchStatement = 15, 
+		RULE_main = 0, RULE_functionDefinition = 1, RULE_functionDefinition1 = 2,
+		RULE_functionDefinition2 = 3, RULE_functionIdentifier = 4, RULE_whereClause = 5,
+		RULE_functionBody = 6, RULE_statement = 7, RULE_beginStatement = 8, RULE_doStatement = 9,
+		RULE_forStatement = 10, RULE_ifStatement = 11, RULE_letStatement = 12,
+		RULE_macroStatement = 13, RULE_structStatement = 14, RULE_tryCatchStatement = 15,
 		RULE_typeStatement = 16, RULE_whileStatement = 17, RULE_anyToken = 18;
 	private static String[] makeRuleNames() {
 		return new String[] {
-			"main", "functionDefinition", "functionDefinition1", "functionDefinition2", 
-			"functionIdentifier", "whereClause", "functionBody", "statement", "beginStatement", 
-			"doStatement", "forStatement", "ifStatement", "letStatement", "macroStatement", 
-			"structStatement", "tryCatchStatement", "typeStatement", "whileStatement", 
+			"main", "functionDefinition", "functionDefinition1", "functionDefinition2",
+			"functionIdentifier", "whereClause", "functionBody", "statement", "beginStatement",
+			"doStatement", "forStatement", "ifStatement", "letStatement", "macroStatement",
+			"structStatement", "tryCatchStatement", "typeStatement", "whileStatement",
 			"anyToken"
 		};
 	}
@@ -71,31 +71,31 @@ import org.antlr.v4.runtime.tree.TerminalNode;
 
 	private static String[] makeLiteralNames() {
 		return new String[] {
-			null, "'('", "')'", "'='", "'['", "']'", "'{'", "'}'", "'=>'", "'&&'", 
-			"'||'", "'=='", "'>='", "'<='", "'<'", "'<:'", "'>'", "'...'", null, 
-			null, null, null, null, null, "'abstract'", null, null, "'baremodule'", 
-			"'begin'", null, "'bitstype'", "'break'", "'catch'", "'ccall'", null, 
-			"'const'", "'continue'", "'do'", "'else'", "'elsif'", "'end'", "'export'", 
-			null, "'finally'", "'for'", "'function'", "'global'", "'if'", "'immutable'", 
-			"'import'", "'importall'", "'::'", "'let'", "'local'", "'macro'", "'module'", 
-			null, "'quote'", "'return'", "'stagedfunction'", null, "'struct'", "'try'", 
+			null, "'('", "')'", "'='", "'['", "']'", "'{'", "'}'", "'=>'", "'&&'",
+			"'||'", "'=='", "'>='", "'<='", "'<'", "'<:'", "'>'", "'...'", null,
+			null, null, null, null, null, "'abstract'", null, null, "'baremodule'",
+			"'begin'", null, "'bitstype'", "'break'", "'catch'", "'ccall'", null,
+			"'const'", "'continue'", "'do'", "'else'", "'elsif'", "'end'", "'export'",
+			null, "'finally'", "'for'", "'function'", "'global'", "'if'", "'immutable'",
+			"'import'", "'importall'", "'::'", "'let'", "'local'", "'macro'", "'module'",
+			null, "'quote'", "'return'", "'stagedfunction'", null, "'struct'", "'try'",
 			"'type'", "'typealias'", "'using'", "'where'", "'while'"
 		};
 	}
 	private static final String[] _LITERAL_NAMES = makeLiteralNames();
 	private static String[] makeSymbolicNames() {
 		return new String[] {
-			null, null, null, null, null, null, null, null, null, null, null, null, 
-			null, null, null, null, null, null, "COMMENTS", "MULTILINECOMMENTS1", 
-			"MULTILINECOMMENTS2", "MULTILINESTRING", "NL", "WHITESPACE", "ABSTRACT", 
-			"ARROWOPERATOR", "ASSIGNMENTOPERATOR", "BAREMODULE", "BEGIN", "BITSHIFTOPERATOR", 
-			"BITSTYPE", "BREAK", "CATCH", "CCALL", "CHAR", "CONST", "CONTINUE", "DO", 
-			"ELSE", "ELSIF", "END", "EXPORT", "EXTERNALCOMMAND", "FINALLY", "FOR", 
-			"FUNCTION", "GLOBAL", "IF", "IMMUTABLE", "IMPORT", "IMPORTALL", "INSTANCEOF", 
-			"LET", "LOCAL", "MACRO", "MODULE", "PIPEOPERATOR", "QUOTE", "RETURN", 
-			"STAGEDFUNCTION", "STRING", "STRUCT", "TRY", "TYPE", "TYPEALIAS", "USING", 
-			"WHERE", "WHILE", "NUMERICAL", "INT_LITERAL", "BINARY", "OCTAL", "HEX", 
-			"FLOAT32_LITERAL", "FLOAT64_LITERAL", "HEX_FLOAT", "IDENTIFIER", "ANY", 
+			null, null, null, null, null, null, null, null, null, null, null, null,
+			null, null, null, null, null, null, "COMMENTS", "MULTILINECOMMENTS1",
+			"MULTILINECOMMENTS2", "MULTILINESTRING", "NL", "WHITESPACE", "ABSTRACT",
+			"ARROWOPERATOR", "ASSIGNMENTOPERATOR", "BAREMODULE", "BEGIN", "BITSHIFTOPERATOR",
+			"BITSTYPE", "BREAK", "CATCH", "CCALL", "CHAR", "CONST", "CONTINUE", "DO",
+			"ELSE", "ELSIF", "END", "EXPORT", "EXTERNALCOMMAND", "FINALLY", "FOR",
+			"FUNCTION", "GLOBAL", "IF", "IMMUTABLE", "IMPORT", "IMPORTALL", "INSTANCEOF",
+			"LET", "LOCAL", "MACRO", "MODULE", "PIPEOPERATOR", "QUOTE", "RETURN",
+			"STAGEDFUNCTION", "STRING", "STRUCT", "TRY", "TYPE", "TYPEALIAS", "USING",
+			"WHERE", "WHILE", "NUMERICAL", "INT_LITERAL", "BINARY", "OCTAL", "HEX",
+			"FLOAT32_LITERAL", "FLOAT64_LITERAL", "HEX_FLOAT", "IDENTIFIER", "ANY",
 			"STAGED_FUNCTION"
 		};
 	}
@@ -368,7 +368,7 @@ import org.antlr.v4.runtime.tree.TerminalNode;
 					setState(60);
 					anyToken();
 					}
-					} 
+					}
 				}
 				setState(65);
 				_errHandler.sync(this);
@@ -391,7 +391,7 @@ import org.antlr.v4.runtime.tree.TerminalNode;
 						setState(67);
 						anyToken();
 						}
-						} 
+						}
 					}
 					setState(72);
 					_errHandler.sync(this);
@@ -409,7 +409,7 @@ import org.antlr.v4.runtime.tree.TerminalNode;
 						setState(74);
 						whereClause();
 						}
-						} 
+						}
 					}
 					setState(79);
 					_errHandler.sync(this);
@@ -495,7 +495,7 @@ import org.antlr.v4.runtime.tree.TerminalNode;
 					setState(87);
 					anyToken();
 					}
-					} 
+					}
 				}
 				setState(92);
 				_errHandler.sync(this);
@@ -513,7 +513,7 @@ import org.antlr.v4.runtime.tree.TerminalNode;
 					setState(94);
 					whereClause();
 					}
-					} 
+					}
 				}
 				setState(99);
 				_errHandler.sync(this);
@@ -594,7 +594,7 @@ import org.antlr.v4.runtime.tree.TerminalNode;
 						setState(105);
 						anyToken();
 						}
-						} 
+						}
 					}
 					setState(110);
 					_errHandler.sync(this);
@@ -666,7 +666,7 @@ import org.antlr.v4.runtime.tree.TerminalNode;
 					setState(115);
 					anyToken();
 					}
-					} 
+					}
 				}
 				setState(120);
 				_errHandler.sync(this);
@@ -735,7 +735,7 @@ import org.antlr.v4.runtime.tree.TerminalNode;
 					setState(121);
 					anyToken();
 					}
-					} 
+					}
 				}
 				setState(126);
 				_errHandler.sync(this);
@@ -760,14 +760,14 @@ import org.antlr.v4.runtime.tree.TerminalNode;
 							setState(128);
 							anyToken();
 							}
-							} 
+							}
 						}
 						setState(133);
 						_errHandler.sync(this);
 						_alt = getInterpreter().adaptivePredict(_input,14,_ctx);
 					}
 					}
-					} 
+					}
 				}
 				setState(138);
 				_errHandler.sync(this);
@@ -1942,7 +1942,7 @@ import org.antlr.v4.runtime.tree.TerminalNode;
 						setState(259);
 						anyToken();
 						}
-						} 
+						}
 					}
 					setState(264);
 					_errHandler.sync(this);
@@ -1967,7 +1967,7 @@ import org.antlr.v4.runtime.tree.TerminalNode;
 						setState(267);
 						anyToken();
 						}
-						} 
+						}
 					}
 					setState(272);
 					_errHandler.sync(this);
@@ -1992,7 +1992,7 @@ import org.antlr.v4.runtime.tree.TerminalNode;
 						setState(275);
 						anyToken();
 						}
-						} 
+						}
 					}
 					setState(280);
 					_errHandler.sync(this);
