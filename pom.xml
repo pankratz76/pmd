@@ -723,12 +723,12 @@
                             <removeUnusedImports/>
                             <!--<removeWildcardImports/>-->
                             <trimTrailingWhitespace/>
-                            <licenseHeader>
-                                <file>${project.basedir}/config/java.header</file>
-                            </licenseHeader>
-                            <importOrder>
-                                <file>${project.basedir}/.import.order</file>
-                            </importOrder>
+<!--<licenseHeader>-->
+<!--    <file>${project.basedir}/config/java.header</file>-->
+<!--</licenseHeader>-->
+<!--<importOrder>-->
+<!--    <file>${project.basedir}/.import.order</file>-->
+<!--</importOrder>-->
                         </java>
                         <pom>
                             <sortPom/>
