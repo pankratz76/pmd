@@ -739,7 +739,7 @@
                                     <include>.gitignore</include>
                                 </includes>
                                 <!--<endWithNewline/>-->
-                                <!--<trimTrailingWhitespace/>-->
+                                <trimTrailingWhitespace/>
                             </format>
                         </formats>
                         <java>
@@ -749,10 +749,10 @@
                                 <exclude>**/testdata/**</exclude>
                                 <exclude>**/unnecessaryimport/package1/U.java</exclude>
                             </excludes>
-                            <removeUnusedImports/>
-                            <!--<removeWildcardImports/>-->
                             <!--<endWithNewline/>-->
-                            <!--<trimTrailingWhitespace/>-->
+                            <!--<removeWildcardImports/>-->
+                            <removeUnusedImports/>
+                            <trimTrailingWhitespace/>
                             <!--<licenseHeader>-->
                             <!--    <file>${project.basedir}/config/java.header</file>-->
                             <!--</licenseHeader>-->
