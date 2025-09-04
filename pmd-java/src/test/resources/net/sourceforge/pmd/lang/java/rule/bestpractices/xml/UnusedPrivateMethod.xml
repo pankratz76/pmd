@@ -2,7 +2,7 @@
 <test-data
     xmlns="http://pmd.sourceforge.net/rule-tests"
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    xsi:schemaLocation="http://pmd.sourceforge.net/rule-tests http://pmd.sourceforge.net/rule-tests_1_0_0.xsd">
+    xsi:schemaLocation="http://pmd.sourceforge.net/rule-tests https://pmd.github.io/schema/rule-tests_1_1_0.xsd">
 
     <test-code>
         <description>private method called by public method</description>
@@ -273,6 +273,9 @@ public class Foo {
     <test-code>
         <description>SuppressWarnings("unused") - simple unused private method</description>
         <expected-problems>0</expected-problems>
+        <expected-suppressions>
+            <suppressor line="3">@SuppressWarnings</suppressor>
+        </expected-suppressions>
         <code><![CDATA[
 public class Foo {
     @SuppressWarnings("unused")
@@ -470,7 +473,7 @@ public class ModelAndView {
     }
 
     public ModelAndView showPieChart(HttpServletRequest request, HttpServletResponse response) throws ServletException {
-        //call private method  USAGE #2.  Method not flagg
+        //call private method  USAGE #2.  Method not flagged
         Object filter = getGraphInnateFilter(request);
 
         //PIE CHART LOGIC
@@ -2566,7 +2569,7 @@ public class Foo {
     </test-code>
 
     <test-code>
-        <description>Problem with capture of type parametr that has wildcard parameterized bound</description>
+        <description>Problem with capture of type parameter that has wildcard parameterized bound</description>
         <expected-problems>0</expected-problems>
         <code><![CDATA[
             class AJjtN<N, B> {}
